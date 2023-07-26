@@ -1,85 +1,47 @@
 
 
-javaScript ?
+# JavaScript
 
-C'est la couche comportemental des sitesWeb
-Toutes les applications web actuels
+JavaScript est la couche comportementale des sites Web et est utilisé dans toutes les applications web actuelles. Pour écrire en camelCase, on utilise les règles de notation où chaque mot commence par une majuscule, à l'exception du premier mot.
 
-Ecrire camelCase
+Réaffecter consiste à donner une nouvelle valeur à une variable déjà déclarée. On peut utiliser les point-virgules partout, mais il est également possible de ne pas les mettre du tout. Il est préférable d'utiliser `let` et `const` plutôt que `var` pour déclarer des variables.
 
-réafecté c'est donnée une vouvelle valeurs avec une variable d'assignation
-Si on met les ; soit on les mets partout soit pas
-Toujours utilisé let et const plutôt que var
+Pour accéder à la documentation, voici deux sites utiles :
+- [Node.js API Documentation](https://nodejs.org/docs/latest-v18.x/api/)
+- [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-aller sur les deux sites suivants pour la doc :
-- https://nodejs.org/docs/latest-v18.x/api/
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Une fonction est un bloc de code qui peut être réutilisé plusieurs fois. Elle commence par le mot-clé `function` et renvoie un résultat à l'aide de `return`.
 
-Fonction bloc de code qui và etre amener à etre utilisé plusieurs fois
+Le "rest operator" ou "spread operator" (les points de suspension `...`) permet de manipuler un nombre variable d'arguments dans les fonctions.
 
-ça commence par un mot clefs function et on renvoie le résultat avec un return 
+Concernant l'encodage des caractères, l'UTF-16 est utilisé, et il est recommandé de s'y référer pour plus d'informations.
 
-... : reste operator ou spred operator
+# API REST
 
-Utf-16 aller voir
+Une API REST est une interface qui permet une communication entre un ordinateur et un serveur dans le but de fournir des données. L'architecture REST (Representational State Transfer) est un ensemble de normes régissant cette communication, la rendant plus simple, flexible et rapide. Les API REST sont largement utilisées dans différents domaines tels que les services météo, la gestion d'utilisateurs, la gestion des tâches, etc.
 
-Qu'est ce qu'une API REST
+Pour interroger une API, on utilise une URL associée à une requête HTTP, et les données sont généralement renvoyées au format JSON, le format le plus utilisé.
 
-Une interface qui permet d'obtenir une communication entre l'ordinateur et un serveur dans le but de fournir des données
+Une API REST est organisée autour de routes qui définissent les chemins d'accès aux différentes ressources ou fonctionnalités. Chaque route est associée à une méthode HTTP spécifiant l'action à effectuer sur la ressource.
 
-L’architecture REST : Representational State Transfer
-Une API est dite “Restful” lorsqu’elle respecte l’architecture REST, c’est-à-dire un ensemble de normes qui régissent la manière dont communique une application avec son environnement, que ce soit un outil tiers ou un autre composant de l'application.
+La documentation d'une API comprend la définition des endpoints, indiquant les URLs spécifiques et les méthodes HTTP associées à chaque fonctionnalité de l'API.
 
+Elle liste les paramètres existants pour chaque endpoint, précisant s'ils sont requis, facultatifs, leur type de données attendu, et leur rôle dans la requête.
 
-Une API Restful répond à des commandes et à des langages spécifiques. Elle est donc plus simple, plus flexible et plus rapide que les autres types d’APIs. Par conséquent, elle est adaptée à un usage industriel en entreprise. C’est pourquoi les APIs REST sont de loin les plus utilisées.
+La documentation fournit des exemples concrets de requêtes et de réponses pour chaque endpoint, aidant les développeurs à comprendre comment interagir avec l'API et interpréter les résultats obtenus.
 
-Intéroger avec l'url de l'API
-les données sonr renvoyé en Json format le plus utilisé
+# Routes et Endpoints dans une API REST
 
-L'API REST est l'interface entre nous et le serveur, dans le but de récupérer les données
-Pour utilisé l'API on utilise une URL couplé avec une requète HTTP
+Les routes définissent les chemins d'accès aux différentes ressources ou fonctionnalités de l'API. Chaque route est associée à un endpoint spécifique, qui correspond à une URL spécifique et à une action HTTP particulière, telle que GET, POST, PUT, DELETE, etc. Par exemple, une route peut être `/articles`, avec l'endpoint `GET`, permettant de récupérer la liste de tous les articles. Une autre route pourrait être `/articles/:id`, avec l'endpoint `GET`, permettant de récupérer un article spécifique en fonction de son ID.
 
-L'API REST est utilisé par exemple sous différentes façons :
-- Service météo 
-- Gestion d'utilisateurs
-- Gestion des tâches
-etc
+# Contrôleurs et leur rôle
 
-En général, la documentation d’une API comporte :
+Les contrôleurs agissent comme une interface entre les routes/endpoints de l'API et les opérations sur les données. Lorsqu'une requête arrive sur une route donnée, le contrôleur associé à cette route prend en charge le traitement de la requête. Il peut appeler des fonctions du modèle pour récupérer ou mettre à jour les données, puis renvoyer une réponse HTTP appropriée au client avec les résultats de l'action. Les contrôleurs sont essentiels pour gérer la logique métier de l'API et faciliter la séparation des préoccupations dans le développement de l'application.
 
-La définition des endpoints ;
-Les paramètres existants ;
-Des exemples de codes, de requêtes et de réponses.
+# Structure MVC
 
-Comment ça marche :
-Les routes dans une API REST définissent les chemins d'accès aux différentes ressources ou fonctionnalités de l'API. Elles indiquent comment l'API doit réagir lorsque des requêtes sont effectuées à des URL spécifiques. Les routes sont associées à des méthodes HTTP telles que GET, POST, PUT, DELETE, etc., pour spécifier l'action à effectuer sur une ressource donnée.
+La structure MVC (Modèle-Vue-Contrôleur) est un modèle architectural couramment utilisé dans le développement web, y compris pour les API REST. Elle divise l'application en trois composants principaux : 
 
-Par exemple, une API REST pour un blog peut avoir les routes suivantes :
-- `GET /articles` : Récupère la liste de tous les articles.
-- `GET /articles/:id` : Récupère un article spécifique en fonction de son ID.
-- `POST /articles` : Crée un nouvel article.
-- `PUT /articles/:id` : Met à jour un article spécifique en fonction de son ID.
-- `DELETE /articles/:id` : Supprime un article spécifique en fonction de son ID.
+le modèle qui gère les données et la logique métier,
+la vue qui affiche les données et le contrôleur qui fait le lien entre le modèle et la vue en traitant les requêtes et les opérations sur les données. Cette approche facilite la séparation des préoccupations et permet une maintenance et un développement plus simples.
 
-Endpoints :
-Les endpoints, également appelés points d'extrémité, correspondent à l'URL complet associé à une route spécifique. Ils spécifient l'emplacement précis où une requête doit être envoyée pour accéder à une ressource ou effectuer une action particulière. Chaque endpoint est une combinaison de l'adresse de base de l'API et de la route.
-
-Par exemple, pour l'API de blog mentionnée précédemment, les endpoints seraient :
-- `GET http://api.example.com/articles`
-- `GET http://api.example.com/articles/123`
-- `POST http://api.example.com/articles`
-- `PUT http://api.example.com/articles/123`
-- `DELETE http://api.example.com/articles/123`
-
-Structure MVC  :
-MVC est un modèle architectural couramment utilisé dans le développement web, y compris les API REST. Il divise l'application en trois composants principaux :
-
-- Modèle : Le modèle représente les données et la logique métier de l'application. C'est ici que les opérations sur les données sont effectuées, comme la récupération ou la mise à jour de la base de données. Le modèle gère également la validation des données et l'interaction avec la base de données.
-
-- Vue : La vue est responsable de l'affichage des données à l'utilisateur final. Dans le cas d'une API REST, la vue ne représente généralement pas l'interface utilisateur réelle, car les API REST retournent généralement des données au format JSON, XML ou autre format de données, plutôt que du HTML pour l'affichage.
-
-- Contrôleur : Le contrôleur agit comme une interface entre le modèle et la vue. Il reçoit les requêtes HTTP des endpoints, traite les données reçues et effectue les opérations appropriées sur le modèle. Une fois que le modèle a été mis à jour, le contrôleur renvoie généralement une réponse appropriée au client, comme un statut de réussite ou un message d'erreur.
-
-La structure MVC facilite la séparation des préoccupations et rend l'application plus modulaire, ce qui permet une maintenance et un développement plus simples.
-
-# NOTE-EXERCICES
