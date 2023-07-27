@@ -18,7 +18,7 @@ Concernant l'encodage des caractères, l'UTF-16 est utilisé, et il est recomman
 
 # API REST
 
-Une API REST est une interface qui permet une communication entre un ordinateur et un serveur dans le but de fournir des données. L'architecture REST (Representational State Transfer) est un ensemble de normes régissant cette communication, la rendant plus simple, flexible et rapide. Les API REST sont largement utilisées dans différents domaines tels que les services météo, la gestion d'utilisateurs, la gestion des tâches, etc.
+Une API REST est une interface qui permet une communication entre un ordinateur et un serveur dans le but de fournir des données. L'architecture REST est un ensemble de normes régissant cette communication, la rendant plus simple, flexible et rapide. Les API REST sont largement utilisées dans différents domaines tels que les services météo, la gestion d'utilisateurs, la gestion des tâches, etc.
 
 Pour interroger une API, on utilise une URL associée à une requête HTTP, et les données sont généralement renvoyées au format JSON, le format le plus utilisé.
 
@@ -40,7 +40,7 @@ Les contrôleurs agissent comme une interface entre les routes/endpoints de l'AP
 
 # Structure MVC
 
-La structure MVC (Modèle-Vue-Contrôleur) est un modèle architectural couramment utilisé dans le développement web, y compris pour les API REST. Elle divise l'application en trois composants principaux : 
+La structure MVC est un modèle architectural couramment utilisé dans le développement web, y compris pour les API REST. Elle divise l'application en trois composants principaux : 
 
 le modèle qui gère les données et la logique métier,
 la vue qui affiche les données et le contrôleur qui fait le lien entre le modèle et la vue en traitant les requêtes et les opérations sur les données. Cette approche facilite la séparation des préoccupations et permet une maintenance et un développement plus simples.
